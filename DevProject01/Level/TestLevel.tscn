@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://kenney_abstract-platformer/PNG/Tiles/Brown tiles/tileBrown_01.png" type="Texture" id=1]
+
+[sub_resource type="TileSet" id=1]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 113, 198 )
+tile_set = SubResource( 1 )
+show_collision = true
+format = 1
+
+[node name="TileBrown01" type="Sprite" parent="TileMap"]
+position = Vector2( -250, 122 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown02" type="Sprite" parent="TileMap"]
+position = Vector2( -136, 120 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown03" type="Sprite" parent="TileMap"]
+position = Vector2( -32, 121 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown04" type="Sprite" parent="TileMap"]
+position = Vector2( 29, 120 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown05" type="Sprite" parent="TileMap"]
+position = Vector2( -188, 121 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown06" type="Sprite" parent="TileMap"]
+position = Vector2( -80, 120 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown07" type="Sprite" parent="TileMap"]
+position = Vector2( 87, 118 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown08" type="Sprite" parent="TileMap"]
+position = Vector2( 146, 114 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown09" type="Sprite" parent="TileMap"]
+position = Vector2( 200, 113 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown10" type="Sprite" parent="TileMap"]
+position = Vector2( 263, 110 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown11" type="Sprite" parent="TileMap"]
+position = Vector2( 323, 106 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown12" type="Sprite" parent="TileMap"]
+position = Vector2( 380, 108 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown13" type="Sprite" parent="TileMap"]
+position = Vector2( 433, 102 )
+texture = ExtResource( 1 )
+
+[node name="TileBrown14" type="Sprite" parent="TileMap"]
+position = Vector2( 485, 102 )
+texture = ExtResource( 1 )

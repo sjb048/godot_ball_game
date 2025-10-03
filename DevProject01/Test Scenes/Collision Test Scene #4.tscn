@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://RBs/RBSphere.tscn" type="PackedScene" id=1]
+[ext_resource path="res://RBs/RBPlane.tscn" type="PackedScene" id=2]
+[ext_resource path="res://HiD and Camera Control.tscn" type="PackedScene" id=3]
+
+[sub_resource type="PhysicsMaterial" id=9]
+
+[sub_resource type="PlaneMesh" id=7]
+size = Vector2( 40, 40 )
+
+[sub_resource type="PlaneShape" id=8]
+plane = Plane( 20, 20, 0, 0 )
+
+[sub_resource type="PhysicsMaterial" id=10]
+
+[sub_resource type="PlaneMesh" id=11]
+size = Vector2( 10, 10 )
+
+[sub_resource type="PlaneShape" id=12]
+plane = Plane( 1, 1, 0, 0 )
+
+[node name="Collision Test Scene #4" type="Spatial"]
+
+[node name="RBPlane2" type="RigidBody" parent="."]
+transform = Transform( 0.97975, -0.200223, -8.75203e-09, 0, -4.37114e-08, 1, -0.200223, -0.97975, -4.28263e-08, -11.0734, -0.218607, -16.3692 )
+mode = 1
+physics_material_override = SubResource( 9 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RBPlane2"]
+transform = Transform( 0.995634, -0.0213687, 0.0908745, -0.0213687, 0.895438, 0.444676, -0.0908745, -0.444676, 0.89107, 3.58561, -1.68338, -0.82059 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="RBPlane2"]
+transform = Transform( 0.981595, 0.0928049, 0.166911, -0.190377, 0.544687, 0.816745, -0.0151164, -0.833489, 0.55233, 9.08457, -1.8663, 0.567576 )
+shape = SubResource( 8 )
+
+[node name="RBPlane" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, -0.231646, -0.9728, 0, 0.9728, -0.231646, 3.22845, 2.33898, 5.32273 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999461, -0.0328237, 0, 0.0328237, 0.999461, -5.25945, -2.0536, -3.9 )
+linear_velocity = Vector3( 0, 0, 4 )
+
+[node name="Ball2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.349823, 1.14545 )
+linear_velocity = Vector3( 0, 0, -4 )
+
+[node name="Ball3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.349823, 1.14545 )
+linear_velocity = Vector3( 0, 0, -4 )
+
+[node name="RBPlane3" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.364771, -4.39698, -1.09955 )
+mode = 1
+physics_material_override = SubResource( 10 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RBPlane3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0713177, -0.911684, 0 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="RBPlane3"]
+transform = Transform( 0.98322, 0.182424, 0, -0.182424, 0.98322, 0, 0, 0, 1, -0.0570049, -2.03561, 0.170967 )
+shape = SubResource( 12 )
+
+[node name="HiD and Camera Control" parent="." instance=ExtResource( 3 )]

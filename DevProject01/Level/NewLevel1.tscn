@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+
+[node name="NewLevel" type="Spatial"]
+
+[node name="Box1" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -65.5103 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Box1"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Box1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0343076, -3.45933, 21.8082 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Camera2" type="Camera" parent="."]
+transform = Transform( -0.992366, 0.123324, -8.67554e-08, 0.123324, 0.992366, 1.07814e-08, 8.74228e-08, 0, -1, 5, 10, 36.6188 )
+fov = 101.25
+
+[node name="planeshape" type="RigidBody" parent="."]
+transform = Transform( 1.64307, 0, 0, 0, 0.996898, 0, 0, 0, 3.70534, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="planeshape"]
+transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="planeshape"]
+transform = Transform( 8.54021, 0, 0.929832, 0, 1, 0, -0.285079, 0, 5.47726, -25.2395, 33.1292, 9.03401 )
+mesh = SubResource( 4 )
+material/0 = null

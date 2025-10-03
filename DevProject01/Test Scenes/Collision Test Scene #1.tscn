@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://RBs/RBPlane.tscn" type="PackedScene" id=1]
+[ext_resource path="res://RBs/RBSphere.tscn" type="PackedScene" id=2]
+
+[sub_resource type="PhysicsMaterial" id=6]
+bounce = 0.65
+
+[node name="Collision Test Scene #1" type="Spatial"]
+
+[node name="RBPlane" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="RBPlane2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Ball" parent="RBPlane2" instance=ExtResource( 2 )]
+transform = Transform( 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, -2.43198, 4.85127, 0 )
+physics_material_override = SubResource( 6 )

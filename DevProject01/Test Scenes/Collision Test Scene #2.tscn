@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://RBs/RBSphere.tscn" type="PackedScene" id=1]
+[ext_resource path="res://RBs/RBPlane.tscn" type="PackedScene" id=2]
+
+[node name="Collision Test Scene #2" type="Spatial"]
+
+[node name="RBPlane" parent="." instance=ExtResource( 2 )]
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.50441, 0 )
+
+[node name="Ball2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51294, 1.5, 0 )
+
+[node name="Ball3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.40045 )
+
+[node name="Ball4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6171, 1.5, 0 )
+
+[node name="Ball5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.4314 )
